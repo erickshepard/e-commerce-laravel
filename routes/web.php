@@ -1,9 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-/** Agregamos el componente */
+/** Agregamos el componente home*/
 use App\Http\Livewire\HomeComponent;
-
+/**Componente Shop */
+use App\Http\Livewire\ShopComponent;
+/**COmponente cart */
+use App\Http\Livewire\CartComponent;
+/**Copmponent checkout */
+use App\Http\Livewire\CheckoutComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +26,9 @@ use App\Http\Livewire\HomeComponent;
 
 /**Ruta del home component */
 Route::get('/',HomeComponent::class);
+/**Ruta shop */
+Route::get('/shop',ShopComponent::class);
+/**Ruta cart */
+Route::get('/cart',CartComponent::class);
+/**Ruta checout */
+Route::get('/checkout',CheckoutComponent::class);
