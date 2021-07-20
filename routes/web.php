@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+/** Agregamos el componente */
+use App\Http\Livewire\HomeComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//te::get('/', function () {
+// return view('welcome');
+//
+
+/**Ruta del home component */
+Route::get('/',HomeComponent::class);
