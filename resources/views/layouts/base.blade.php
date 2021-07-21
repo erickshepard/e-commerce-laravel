@@ -77,8 +77,13 @@
 														<a title="Dashboard" href="{{ route('admin.dashboard')}}">Dashboard</a>
 													</li>
 													<li class="menu-item">
-														<a href="{{route('logout')}}">Logout</a>
+														<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 													</li>
+													<form action="{{route('logout')}}" method="POST" id=logout-form>
+														@csrf
+														
+													</form>
+													
 												</ul>
 											</li>
 										@else
@@ -91,6 +96,13 @@
 													<li class="menu-item">
 														<a href="{{route('logout')}}"></a>
 													</li>
+													<li class="menu-item">
+														<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+													</li>
+													<form action="{{route('logout')}}" method="POST" id=logout-form>
+														@csrf
+														
+													</form>
 												</ul>
 											</li>
 									    @endif
